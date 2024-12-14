@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import LatestNews from "../components/LatestNews";
+import Navbar from "../components/Navbar";
 
 const HomelayOut = () => {
   return (
@@ -8,6 +9,7 @@ const HomelayOut = () => {
       <header>
         <Header></Header>
         <LatestNews></LatestNews>
+        <Navbar></Navbar>
       </header>
     </div>
   );
