@@ -1,9 +1,12 @@
 import React from "react";
+import Header from "../components/Header";
 
 const HomelayOut = () => {
   return (
-    <div>
-      <h2>lauyour</h2>
+    <div className="w-10/12 mx-auto my-5">
+      <header>
+        <Header></Header>
+      </header>
     </div>
   );
 };
