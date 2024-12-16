@@ -1,7 +1,9 @@
+import LoginWithGoogle from "../components/LoginWithGoogle";
+
 const RightSideBar = () => {
   return (
-    <div>
-      <h1>right</h1>
+    <div className="space-y-6 mb-5">
+      <LoginWithGoogle></LoginWithGoogle>
     </div>
   );
 };
