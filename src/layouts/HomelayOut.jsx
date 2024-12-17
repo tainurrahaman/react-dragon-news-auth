@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/Header";
 import LatestNews from "../components/LatestNews";
 import Navbar from "../components/Navbar";
@@ -14,7 +13,7 @@ const HomelayOut = () => {
         <LatestNews></LatestNews>
         <Navbar></Navbar>
       </header>
-      <main className="grid grid-cols-10">
+      <main className="grid grid-cols-9 my-20 gap-6 justify-between">
         <aside className="col-span-2">
           <LeftsideBar></LeftsideBar>
         </aside>
