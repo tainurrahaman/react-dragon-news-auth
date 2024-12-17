@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import HighlightedNews from "../components/HighlightedNews";
 
 const LeftsideBar = () => {
   const [categories, setCategories] = useState([]);
@@ -22,6 +23,7 @@ const LeftsideBar = () => {
           {category.category_name}
         </NavLink>
       ))}
+      <HighlightedNews></HighlightedNews>
     </div>
   );
 };
