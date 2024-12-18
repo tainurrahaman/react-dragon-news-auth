@@ -4,13 +4,13 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
-  const { name } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   return (
     <div className="flex justify-between mt-5 items-center">
-      <div>{name}</div>
+      <div>{user && user.email}</div>
       <div className="font-normal text-[18px] text-[#706F6F] flex gap-3 text-center">
-        <Link>Home</Link>
+        <Link to="/">Home</Link>
         <Link>About</Link>
         <Link>Career</Link>
       </div>
