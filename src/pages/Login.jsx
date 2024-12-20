@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
@@ -6,6 +6,7 @@ const Login = () => {
   const { userLogin, setUser } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const [error, setError] = useState({});
 
   const handleSignin = (e) => {
     e.preventDefault();
@@ -19,8 +20,8 @@ const Login = () => {
         setUser(user);
         navigate(location?.state ? location.state : "/");
       })
-      .catch((error) => {
-        alert("invalid email and password");
+      .catch((err) => {
+        setError({ ...error, login: err.code });
       });
   };
 
@@ -55,6 +56,11 @@ const Login = () => {
               className="input input-bordered "
               required
             />
+            {error.login && (
+              <label className="label text-xs text-red-500">
+                {error.login}
+              </label>
+            )}
             <label className="label">
               <a
                 href="#"
