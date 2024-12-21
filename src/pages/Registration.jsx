@@ -21,20 +21,20 @@ const Registration = () => {
     createNewUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+
         setUser(user);
         updateUserrofile({ displayName: name, photoURL: photo })
           .then(() => {
             navigate("/");
           })
           .catch((err) => {
-            console.log(err);
+            setError(err);
           });
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        setError(errorCode, errorMessage);
       });
   };
 
