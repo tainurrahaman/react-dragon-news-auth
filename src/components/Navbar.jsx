@@ -18,7 +18,7 @@ const Navbar = () => {
         {user && user?.email ? (
           <div>
             <img
-              className="w-14 h-14 object-cover rounded-full"
+              className="w-12 h-12 object-cover rounded-full"
               src={user.photoURL}
               alt="user-profile"
             />
